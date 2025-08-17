@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Abingdon Team Name Spinner</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #fef6e4;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #d62828;
+            font-size: 3em;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 2em;
+            font-weight: bold;
+            color: #003049;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            background-color: #f77f00;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d62828;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎡 Team Name Spinner 🎉</h1>
+    <p>Click the button to spin and get your hilarious team name!</p>
+    <button onclick="generateName()">Spin!</button>
+    <div id="result"></div>
+
+    <script>
+        const adjectives = ["Unstable", "Sassy", "Cringe", "Sneaky", "Bussin", "Grumpy", "Extra", "Rowdy", "Quirky", "Dazzling"];
+        const animals = ["Llamas", "Sloths", "Otters", "Hedgehogs", "Pandas", "Cardinals", "Narwals", "Raccoons", "Jellyfish", "Chickens"];
+
+        function generateName() {
+            const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const animal = animals[Math.floor(Math.random() * animals.length)];
+            document.getElementById("result").innerText = `${adj} ${animal}`;
+        }
+    </script>
+</body>
+</html>
